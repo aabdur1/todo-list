@@ -1,4 +1,5 @@
 import GithubQR from "./images/github-qr-code.png";
+import clock from "./clock.js";
 
 export default function header() {
   const headerWrapper = document.createElement("div");
@@ -20,4 +21,12 @@ export default function header() {
   githubQRCode.alt = "Github Link";
   githubQRCode.classList.add("github-qr");
   headerWrapper.appendChild(githubQRCode);
+
+  const clockWrapper = document.createElement("div");
+  clockWrapper.classList.add("clock");
+  clockWrapper.id = "clock";
+  headerWrapper.appendChild(clockWrapper);
+  clock();
+
+  return headerWrapper;
 }

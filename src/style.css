@@ -1,7 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+128&display=swap");
 
+body {
+  background-color: #ecfccb;
+}
+
 .header-wrapper {
   width: 100%;
+  margin: 0;
+  height: 5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,4 +25,8 @@
 
 .github-qr {
   width: 4rem;
+}
+
+.clock {
+  font-size: 2.5rem;
 }
