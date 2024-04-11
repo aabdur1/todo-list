@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+128&display=swap");
+
+.header-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-title {
+  font-size: 4rem;
+}
+
+.github-barcode {
+  font-family: "Libre Barcode 128", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.github-qr {
+  width: 4rem;
+}

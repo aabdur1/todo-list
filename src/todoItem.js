@@ -12,8 +12,8 @@ export default class TodoItem {
 const addTodo = document.createElement("button");
 addTodo.classList.add("add-todo-btn");
 addTodo.textContent = "Add todo";
-addTodo.addEventListener("click", createTodo);
-document.body.appendChild(newTodo);
+addTodo.addEventListener("click", newTodo);
+document.body.appendChild(addTodo);
 
 function newTodo() {
   const newTodoWrapper = document.createElement("div");
