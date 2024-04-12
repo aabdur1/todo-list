@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+128&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+128&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Outfit:wght@100..900&display=swap");
 
 body {
   background-color: #ecfccb;
@@ -11,7 +11,7 @@ body {
   align-items: center;
   justify-content: space-between;
   margin-inline: 2rem;
-  margin-block: 1.5rem;
+  margin-block: 2rem;
   color: #075985;
 }
 
@@ -52,8 +52,9 @@ body {
 }
 
 .project-wrapper {
+  height: 60dvh;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   background-color: #a8a29e;
   opacity: 0.7;
   padding: 1rem;
@@ -61,4 +62,16 @@ body {
   box-shadow: 0 1px 1px hsla(117deg, 0%, 0%, 0.075),
     0 2px 2px hsl(117deg 0% 0% / 0.075), 0 4px 4px hsl(117deg 0% 0% / 0.075),
     0 12px 12px hsl(117deg 0% 0% / 0.33);
+}
+
+.create-project-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.new-project-input {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }

@@ -12,8 +12,10 @@ class Project {
 const projectsList = [];
 
 function addProject(name) {
-  const newProject = new Project(name);
-  projectsList.push(newProject);
+  if (name) {
+    const newProject = new Project(name);
+    projectsList.push(newProject);
+  }
   displayProjects();
 }
 
@@ -23,6 +25,7 @@ function displayProjects() {
 
   projectsList.forEach((project) => {
     const projectElement = document.createElement("div");
+    projectElement.classList.add("project");
     const projectName = document.createElement("h2");
     projectName.textContent = project.name;
     projectElement.appendChild(projectName);
@@ -42,19 +45,24 @@ export default function Projects() {
   projectWrapper.classList.add("project-wrapper");
   projectWrapper.id = "project-wrapper";
 
+  const createProjectWrapper = document.createElement("div");
+  createProjectWrapper.classList.add("create-project-wrapper");
+  projectWrapper.appendChild(createProjectWrapper);
+
   const newProject = document.createElement("input");
   newProject.type = "text";
+  newProject.classList.add("new-project-input");
   newProject.id = "projectName";
   newProject.placeholder = "New Project";
-  projectWrapper.appendChild(newProject);
+  createProjectWrapper.appendChild(newProject);
 
   const newProjectBtn = document.createElement("button");
-  newProjectBtn.textContent = "Add new project";
+  newProjectBtn.textContent = "Add project";
   newProjectBtn.addEventListener("click", () => {
     addProject(`${newProject.value}`);
     newProject.value = "";
   });
-  projectWrapper.appendChild(newProjectBtn);
+  createProjectWrapper.appendChild(newProjectBtn);
 
   const projectListWrapper = document.createElement("div");
   projectListWrapper.classList.add("project-list-wrapper");
