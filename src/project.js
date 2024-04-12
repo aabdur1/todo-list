@@ -17,6 +17,7 @@ function addProject(name) {
     projectsList.push(newProject);
   }
   displayProjects();
+  console.log(projectsList);
 }
 
 function displayProjects() {
@@ -57,6 +58,7 @@ export default function Projects() {
   createProjectWrapper.appendChild(newProject);
 
   const newProjectBtn = document.createElement("button");
+  newProjectBtn.classList.add("new-project-btn");
   newProjectBtn.textContent = "Add project";
   newProjectBtn.addEventListener("click", () => {
     addProject(`${newProject.value}`);
