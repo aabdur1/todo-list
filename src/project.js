@@ -49,6 +49,11 @@ function switchProject(project) {
     todoItemTitle.textContent = `${todo.title}`;
     todoItem.appendChild(todoItemTitle);
   });
+
+  const newTodoItemBtn = document.createElement("button");
+  newTodoItemBtn.classList.add("new-todo-item-btn");
+  newTodoItemBtn.textContent = "+";
+  todosContainer.appendChild(newTodoItemBtn);
 }
 
 export default function Projects() {
