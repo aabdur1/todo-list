@@ -29,15 +29,25 @@ function displayProjects() {
     projectElement.classList.add("project");
     const projectName = document.createElement("h2");
     projectName.textContent = project.name;
+    projectName.addEventListener("click", () => switchProject(project));
     projectElement.appendChild(projectName);
 
-    project.todos.forEach((todo) => {
-      const todoElement = document.createElement("p");
-      todoElement.textContent = todo;
-      projectElement.appendChild(todoElement);
-    });
-
     projectsContainer.appendChild(projectElement);
+  });
+}
+
+function switchProject(project) {
+  const todosContainer = document.querySelector("#todos-wrapper");
+  todosContainer.innerHTML = "";
+
+  project.todos.forEach((todo) => {
+    const todoItem = document.createElement("div");
+    todoItem.classList.add("todo-item-wrapper");
+    todosContainer.appendChild(todoItem);
+
+    const todoItemTitle = document.createElement("h2");
+    todoItemTitle.textContent = `${todo.title}`;
+    todoItem.appendChild(todoItemTitle);
   });
 }
 
