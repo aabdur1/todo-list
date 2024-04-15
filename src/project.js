@@ -54,7 +54,10 @@ function switchProject(project) {
   newTodoItemBtn.classList.add("new-todo-item-btn");
   newTodoItemBtn.textContent = "+";
   todosContainer.appendChild(newTodoItemBtn);
+  newTodoItemBtn.addEventListener("click", createTodo);
 }
+
+function createTodo() {}
 
 export default function Projects() {
   const projectWrapper = document.createElement("div");
