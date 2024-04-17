@@ -11,11 +11,6 @@ export default function header() {
   headerTitle.classList.add("header-title");
   headerWrapper.appendChild(headerTitle);
 
-  const githubBarcode = document.createElement("p");
-  githubBarcode.classList.add("github-barcode");
-  githubBarcode.textContent = "https://github.com/aabdur1";
-  headerWrapper.appendChild(githubBarcode);
-
   const githubQRCode = document.createElement("img");
   githubQRCode.src = GithubQR;
   githubQRCode.alt = "Github Link";

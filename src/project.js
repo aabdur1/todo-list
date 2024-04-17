@@ -57,7 +57,9 @@ function switchProject(project) {
   newTodoItemBtn.addEventListener("click", createTodo);
 }
 
-function createTodo() {}
+function createTodo() {
+  todosContainer.innerHTML = "";
+}
 
 export default function Projects() {
   const projectWrapper = document.createElement("div");
